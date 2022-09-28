@@ -1,0 +1,141 @@
+
+:root {
+    --font-color: #d7dadc;
+    --font-title-size: 20px;
+    --font-size: 15px;
+    
+    --background-color: #a2c1e0;
+    --background-header: #5d6f80;
+    --background-weather-search: #7ab8da;
+    --background-footer: #7d95ad;
+}
+body{
+    background-color: var(--background-color);
+    margin: 0px;
+    padding: 0px;
+}
+img{
+    height:50px;
+    width:50px;
+}
+button{
+    background-color: var(--background-weather-search);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* #region content */
+#content {
+    width: 100%;
+}
+/* #endregion */
+/* #region header */
+header {
+    background-color: var(--background-header);
+    color: var(--font-color);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    top: 0;
+}
+.headerTitle{
+    font-size: var(--font-title-size * 1.1);
+    text-align: center;
+}
+/* #endregion */
+/* #region weatherSearch*/
+.weatherSearch{
+    display: flex;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: var(--background-color);
+    justify-content: center;
+}
+#search{
+    background-color: var(--background-color);
+    border: none;
+    margin-right: 10px;
+    border-bottom: 1px solid black;
+}
+#search:focus{
+    border: none;
+}
+/* #endregion */
+/* #region weatherStatus*/
+.weatherStatusDiv{
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 180px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: var(--background-weather-search);
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    gap: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.unitSwitch{
+    position : relative ;
+    display : inline-block;
+    width : 20px;
+    height : 11px;
+    background-color: red;
+    border-radius: 5px;
+    border: 2px solid gray;
+    align-items: center;
+    justify-content: center;
+}
+.unitSwitch:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    top: 1px;
+    left: 1px;
+    transition:  all 0.5s;
+}
+       
+/* Checkbox checked effect */
+.sliderCheck:checked + .unitSwitch::after {
+    left : 9px;
+}
+       
+/* Checkbox checked toggle label color */
+.sliderCheck:checked + .unitSwitch {
+    background-color: green;
+}
+       
+/* Checkbox vanished */
+.sliderCheck {
+    display : none;
+}
+/* #endregion */
+/* #region footer */
+footer {
+    display: flex;
+    background-color: var(--background-footer);
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    margin-left: 0px;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+footer>p {
+    font-size: var(--font-size);
+}
+footer>a {
+    font-size: var(--font-size);
+    color: white;
+}
+
+/* #endregion */
